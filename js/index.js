@@ -40,3 +40,52 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+const links = document.querySelectorAll('a')
+links[0].textContent = 'Services'
+links[1].textContent = 'Product'
+links[2].textContent = 'Vison'
+links[3].textContent = 'Features'
+links[4].textContent = 'About'
+links[5].textContent = 'Contact'
+
+//add h1 text dom is awesome
+const banner = document.querySelector('.cta-text h1')
+banner.innerHTML='DOM <br> IS <br> AWESOME'
+const startButt = document.querySelector('.cta button')
+startButt.textContent= 'Get Started'
+//add circle image
+const circImg = document.querySelector('#cta-img')
+circImg.setAttribute('src', './img/header-img.png')
+
+//Main content
+
+
+const mainH4s = document.querySelectorAll('.main-content h4')
+mainH4s[0].textContent=`${siteContent["main-content"]["features-h4"]}`
+mainH4s[1].textContent=`${siteContent["main-content"]["about-h4"]}`
+mainH4s[2].textContent=`${siteContent["main-content"]["services-h4"]}`
+mainH4s[3].textContent=`${siteContent["main-content"]["product-h4"]}`
+mainH4s[4].textContent=`${siteContent["main-content"]["vision-h4"]}`
+
+const mainPs = document.querySelectorAll('.main-content p')
+mainPs[0].textContent=`${siteContent["main-content"]["features-content"]}`
+mainPs[1].textContent=`${siteContent["main-content"]["about-content"]}`
+mainPs[2].textContent=`${siteContent["main-content"]["services-content"]}`
+mainPs[3].textContent=`${siteContent["main-content"]["product-content"]}`
+mainPs[4].textContent=`${siteContent["main-content"]["vision-content"]}`
+
+const middleImg = document.querySelector('.middle-img')
+middleImg.setAttribute('src',`${siteContent["main-content"]["middle-img-src"]}`)
+
+const contactH4= document.querySelector('.contact h4')
+contactH4.textContent='Contact'
+
+const contactPs = document.querySelectorAll('.contact p')
+contactPs[0].innerHTML= '123 Way 456 Street <br> Somewhere, USA'
+contactPs[1].textContent=`${siteContent["contact"].phone}`
+contactPs[2].textContent=`${siteContent["contact"].email}`
+
+const copyright = document.querySelector('footer p')
+copyright.textContent=`${siteContent["footer"].copyright}`

@@ -89,3 +89,19 @@ contactPs[2].textContent=`${siteContent["contact"].email}`
 
 const copyright = document.querySelector('footer p')
 copyright.textContent=`${siteContent["footer"].copyright}`
+
+
+const app = document.createElement('a')
+const pre = document.createElement('a')
+const nav = document.querySelector('nav')
+app.textContent= "Append"
+app.href= "#"
+pre.textContent = "Prepend"
+pre.href ="#"
+
+nav.appendChild(app)
+nav.prepend(pre)
+
+for (i=0; i<links.length+1; i++){
+  links[i].style.color = 'green';
+}

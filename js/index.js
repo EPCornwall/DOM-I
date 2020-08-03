@@ -42,13 +42,25 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
+const app = document.createElement('a')
+const pre = document.createElement('a')
+const nav = document.querySelector('nav')
+app.textContent= "Append"
+app.href= "#"
+pre.textContent = "Prepend"
+pre.href ="#"
+
+nav.appendChild(app)
+nav.prepend(pre)
+
+
 const links = document.querySelectorAll('a')
-links[0].textContent = 'Services'
-links[1].textContent = 'Product'
-links[2].textContent = 'Vison'
-links[3].textContent = 'Features'
-links[4].textContent = 'About'
-links[5].textContent = 'Contact'
+links[1].textContent = 'Services'
+links[2].textContent = 'Product'
+links[3].textContent = 'Vison'
+links[4].textContent = 'Features'
+links[5].textContent = 'About'
+links[6].textContent = 'Contact'
 
 //add h1 text dom is awesome
 const banner = document.querySelector('.cta-text h1')
@@ -91,16 +103,7 @@ const copyright = document.querySelector('footer p')
 copyright.textContent=`${siteContent["footer"].copyright}`
 
 
-const app = document.createElement('a')
-const pre = document.createElement('a')
-const nav = document.querySelector('nav')
-app.textContent= "Append"
-app.href= "#"
-pre.textContent = "Prepend"
-pre.href ="#"
 
-nav.appendChild(app)
-nav.prepend(pre)
 
 for (i=0; i<links.length+1; i++){
   links[i].style.color = 'green';
